@@ -9,4 +9,4 @@ enum Input
     up
 }
 
-global.d = 1
+global.d = 0
