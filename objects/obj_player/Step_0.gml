@@ -1,14 +1,13 @@
-move = (get_input_pressed(Input.right) || get_input_pressed(Input.left) || get_input_pressed(Input.down) || get_input_pressed(Input.up))
 dx = (get_input_pressed(Input.right) - get_input_pressed(Input.left)) * 8
 dy = (get_input_pressed(Input.down) - get_input_pressed(Input.up)) * 8
 
-if move && x == tx && y == ty
+if x == tx && y == ty
 {
     var p = noone
 
     if abs(dx)
     {
-        image_xscale = dx / 8
+        image_index = (dx < 0)
         p = instance_place(tx + dx, ty, par_pushable)
         if((!place_meeting(tx + dx, ty, par_solid) || (p && !place_meeting(tx + dx * 2, ty, par_solid))) && (tx + dx > 0 && tx + dx < room_width))
         {

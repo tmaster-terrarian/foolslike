@@ -1,10 +1,4 @@
-// x += 4
-// y += 4
-// draw_self()
-// x -= 4
-// y -= 4
-
-draw_sprite_ext(spr_player, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
+draw_self()
 
 if global.d
 {
@@ -12,7 +6,7 @@ if global.d
     draw_set_valign(fa_top)
     draw_set_font(fnt_basic)
 
-    if(x != tx || y != ty)
+    if(state == "move")
     {
         var c = c_green
         draw_rectangle_color(tilex * 8 + 1, tiley * 8 + 1, tilex * 8 + 6, tiley * 8 + 6, c,c,c,c, true)

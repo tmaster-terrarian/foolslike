@@ -1,5 +1,6 @@
 image_speed = 0
 depth = 30
+tile = 0
 
 state = "normal"
 

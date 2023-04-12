@@ -1,5 +1,6 @@
 image_speed = 0
 depth = 199
+tile = 1
 
 ch = function(_x, _y)
 {
